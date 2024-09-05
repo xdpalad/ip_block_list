@@ -22,7 +22,7 @@
 
 <h2>Как начать использование</h2>
 
-<h3>Шаг 1:Клонирование репозитория и запуск скрипта для создания и запуска Docker контейнера</h3>
+<h3>Шаг 1: Клонирование репозитория и запуск скрипта для создания и запуска Docker контейнера</h3>
 
 <pre><code>wget -q https://raw.githubusercontent.com/xdpalad/ip_block_list/main/script/up_docker_in_bd_ip_block.sh -O up_docker_in_bd_ip_block.sh && bash up_docker_in_bd_ip_block.sh && rm -f up_docker_in_bd_ip_block.sh
 </code></pre>
