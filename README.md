@@ -42,7 +42,7 @@
 
 <p>Для просмотра логов выполнения скрипта выполните команду:</p>
 
-<pre><code>tail -f /var/log/in_bd_ip_block.log</code></pre>
+<pre><code>sudo docker logs in_bd_ip_block</code></pre>
 
 <h3>Шаг 3: Интеграция с Docker Hub (необязательно)</h3>
 
