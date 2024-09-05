@@ -143,8 +143,8 @@ list_download_block() {
     # Загружаем все файлы
     download_file "https://raw.githubusercontent.com/im-sm/Pi-hole-Torrent-Blocklist/main/all-torrent-websites.txt" "all-torrent-websites.txt"
     download_file "https://raw.githubusercontent.com/SM443/Pi-hole-Torrent-Blocklist/main/all-torrent-trackres.txt" "all-torrent-trackers.txt"
-    download_file "https://raw.githubusercontent.com/xdpalad/list_block_ip/main/api_palyer.txt" "api_palyer.txt"
-    download_file "https://raw.githubusercontent.com/xdpalad/list_block_ip/main/custom.txt" "custom.txt"
+    download_file "https://raw.githubusercontent.com/xdpalad/ip_block_list/main/api_palyer.txt" "api_palyer.txt"
+    download_file "https://raw.githubusercontent.com/xdpalad/ip_block_list/main/custom.txt" "custom.txt"
 }
 
 # Функция для сортировки всех загруженных файлов
