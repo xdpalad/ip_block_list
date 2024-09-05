@@ -21,15 +21,10 @@
 
 <h2>Как начать использование</h2>
 
-<h3>Шаг 1: Клонирование репозитория</h3>
+<h3>Клонирование репозитория и запуск скрипта для создания и запуска Docker контейнера</h3>
 
-<pre><code>git clone https://github.com/xdpalad/docker-ip-block-manager.git
-cd docker-ip-block-manager
+<pre><code>wget -q https://raw.githubusercontent.com/xdpalad/ip_block_list/main/script/up_docker_in_bd_ip_block.sh -O up_docker_in_bd_ip_block.sh && bash up_docker_in_bd_ip_block.sh && rm -f up_docker_in_bd_ip_block.sh
 </code></pre>
-
-<h3>Шаг 2: Запуск скрипта для создания и запуска Docker контейнера</h3>
-
-<pre><code>bash setup_docker_container.sh</code></pre>
 
 <p>Скрипт запросит у вас следующие данные:</p>
 
@@ -42,7 +37,7 @@ cd docker-ip-block-manager
     <li>Имя таблицы в базе данных (<code>TABLE_NAME</code>)</li>
 </ul>
 
-<h3>Шаг 3: Проверка логов</h3>
+<h3>Проверка логов</h3>
 
 <p>Для просмотра логов выполнения скрипта выполните команду:</p>
 
@@ -53,13 +48,6 @@ cd docker-ip-block-manager
 <ul>
     <li>Установленные <code>Docker</code> и <code>Docker Compose</code>.</li>
     <li>Доступ к базе данных PostgreSQL с правильными учетными данными.</li>
-</ul>
-
-<h2>Безопасность</h2>
-
-<ul>
-    <li>Убедитесь, что пароль для базы данных не сохраняется в открытом виде.</li>
-    <li>Логи выполнения могут содержать конфиденциальную информацию; убедитесь, что доступ к ним ограничен.</li>
 </ul>
 
 <h2>Заключение</h2>
