@@ -49,8 +49,8 @@
 <p>Вы можете использовать команды, предоставленные в скрипте, для пересборки Docker-образа и его отправки в репозиторий:</p>
 
 <pre><code>
-wget https://github.com/xdpalad/ip_block_list/blob/main/script/in_bd_ip_block.sh
-wget https://github.com/xdpalad/ip_block_list/blob/main/Dockerfile
+wget https://raw.githubusercontent.com/xdpalad/ip_block_list/main/script/in_bd_ip_block.sh
+wget https://raw.githubusercontent.com/xdpalad/ip_block_list/main/Dockerfile
 </code></pre>
 
 <pre><code>
