@@ -48,13 +48,11 @@
 
 <p>Вы можете использовать команды, предоставленные в скрипте, для пересборки Docker-образа и его отправки в репозиторий:</p>
 
-<pre><code>
-wget https://github.com/xdpalad/ip_block_list/blob/main/script/in_bd_ip_block.sh
-wget https://github.com/xdpalad/ip_block_list/blob/main/Dockerfile
+<pre><code>wget https://raw.githubusercontent.com/xdpalad/ip_block_list/main/script/in_bd_ip_block.sh
+wget https://raw.githubusercontent.com/xdpalad/ip_block_list/main/Dockerfile
 </code></pre>
 
-<pre><code>
-docker login
+<pre><code>docker login
 docker build -t in_bd_ip_block .
 docker tag in_bd_ip_block xdpalad/in_bd_ip_block:latest
 docker push xdpalad/in_bd_ip_block:latest
