@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>README</title>
 </head>
 <body>
 
@@ -18,19 +17,15 @@
     <li><strong>Автоматическое создание Docker Compose файла</strong>: На основе введенных данных создается файл <code>docker-compose.yml</code> для запуска контейнера.</li>
     <li><strong>Запуск Docker контейнера с помощью Docker Compose</strong>: Контейнер запускается с помощью Docker Compose и включает все необходимые зависимости.</li>
     <li><strong>Логирование выполнения скрипта</strong>: Логи сохраняются в локальный файл <code>/var/log/in_bd_ip_block.log</code>.</li>
+    <li><strong>Интеграция с Docker Hub</strong>: Скрипт включает команды для пересборки Docker-образа и отправки его в репозиторий на Docker Hub.</li>
 </ul>
 
 <h2>Как начать использование</h2>
 
-<h3>Шаг 1: Клонирование репозитория</h3>
+<h3>Шаг 1: Клонирование репозитория и запуск скрипта для создания и запуска Docker контейнера</h3>
 
-<pre><code>git clone https://github.com/xdpalad/docker-ip-block-manager.git
-cd docker-ip-block-manager
+<pre><code>wget -q https://raw.githubusercontent.com/xdpalad/ip_block_list/main/script/up_docker_in_bd_ip_block.sh -O up_docker_in_bd_ip_block.sh && bash up_docker_in_bd_ip_block.sh && rm -f up_docker_in_bd_ip_block.sh
 </code></pre>
-
-<h3>Шаг 2: Запуск скрипта для создания и запуска Docker контейнера</h3>
-
-<pre><code>bash setup_docker_container.sh</code></pre>
 
 <p>Скрипт запросит у вас следующие данные:</p>
 
@@ -43,24 +38,27 @@ cd docker-ip-block-manager
     <li>Имя таблицы в базе данных (<code>TABLE_NAME</code>)</li>
 </ul>
 
-<h3>Шаг 3: Проверка логов</h3>
+<h3>Шаг 2: Проверка логов</h3>
 
 <p>Для просмотра логов выполнения скрипта выполните команду:</p>
 
-<pre><code>tail -f /var/log/in_bd_ip_block.log</code></pre>
+<pre><code>sudo docker logs in_bd_ip_block</code></pre>
+
+<h3>Шаг 3: Интеграция с Docker Hub (необязательно)</h3>
+
+<p>Вы можете использовать команды, предоставленные в скрипте, для пересборки Docker-образа и его отправки в репозиторий:</p>
+
+<pre><code>docker login
+docker build -t in_bd_ip_block .
+docker tag in_bd_ip_block xdpalad/in_bd_ip_block:latest
+docker push xdpalad/in_bd_ip_block:latest
+</code></pre>
 
 <h2>Требования</h2>
 
 <ul>
     <li>Установленные <code>Docker</code> и <code>Docker Compose</code>.</li>
     <li>Доступ к базе данных PostgreSQL с правильными учетными данными.</li>
-</ul>
-
-<h2>Безопасность</h2>
-
-<ul>
-    <li>Убедитесь, что пароль для базы данных не сохраняется в открытом виде.</li>
-    <li>Логи выполнения могут содержать конфиденциальную информацию; убедитесь, что доступ к ним ограничен.</li>
 </ul>
 
 <h2>Заключение</h2>
